@@ -50,3 +50,14 @@ Declarar uma const
 Método teste
 se não for válido
 */
+
+/*
+npm install sequeliza -> para comunicado o back end com diversos sgbd
+ORM: Traduz entidades de um banco de dados para objetos.
+
+Model: 
+É uma abstração que representa uma tabela. Ela uma classe que representa uma tabela.
+Vai ter os atributos com seus tipos específicos.
+As instâncias serão as linhas da tabela.
+A model vai dar informações para o sequelize se comunicar com sgbd.
+*/
