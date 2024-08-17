@@ -11,35 +11,35 @@ module.exports = {
         allowNull: true,
         },
         Cep: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false
         },
         Logradouro: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false
         },
         Numero: {
-            type: DataTypes.INTEGER,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         Complemento: {
-          type: DataTypes.STRING,
+          type: Sequelize.STRING,
           allowNull: false
         },
         Bairro: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false
         },
         Cidade: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false
         },
         Estado: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false
         },
         MunicipioIBGE: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false
         },
         createdAt: {
@@ -57,3 +57,8 @@ module.exports = {
     await queryInterface.dropTable('enderecos');
   }
 };
+
+
+// npm install sequelize pg pg-hstore - caso a migrate dê erro e peça a instalação do pg
+// npx sequelize-cli db:migrate - rodar a migration - vai subir pro banco de dados tudo de uma vez a migration
+// comando para voltar (fiz cagada) - npx sequelize-cli db:migrate:undo  - vai voltar uma por uma

@@ -3,7 +3,7 @@ module.exports = {
     host: 'localhost',
     username: 'postgres',
     password: 'postgres',
-    database: 'apiNode',
+    database: 'apinode',
     define: {
         timestamps: true,
         uderscored: true
