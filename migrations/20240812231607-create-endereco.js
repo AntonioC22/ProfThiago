@@ -61,4 +61,4 @@ module.exports = {
 
 // npm install sequelize pg pg-hstore - caso a migrate dê erro e peça a instalação do pg
 // npx sequelize-cli db:migrate - rodar a migration - vai subir pro banco de dados tudo de uma vez a migration
-// comando para voltar (fiz cagada) - npx sequelize-cli db:migrate:undo  - vai voltar uma por uma
+// comando para voltar (fiz cagada) - npx sequelize-cli db:migrate:undo  - vai voltar uma por uma; npx sequelize-cli db:migrate:undo:all - volta tudo de uma vez
