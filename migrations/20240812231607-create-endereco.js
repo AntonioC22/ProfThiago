@@ -3,20 +3,57 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     */
+    await queryInterface.createTable('enderecos', {
+      Id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+        allowNull: true,
+        },
+        Cep: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        Logradouro: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        Numero: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        Complemento: {
+          type: DataTypes.STRING,
+          allowNull: false
+        },
+        Bairro: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        Cidade: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        Estado: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        MunicipioIBGE: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        createdAt: {
+          type: Sequelize.DATE,
+          allowNull: false,
+        },
+        updateAt: {
+          type: Sequelize.DATE,
+          allowNull: false,
+        },
+    });
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
+    await queryInterface.dropTable('enderecos');
   }
 };

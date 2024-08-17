@@ -16,7 +16,7 @@ app.get('/rota', (req, res) => {
 
 app.get('/consulta-cep/:cep', async (req, res) => { //:cep -> Os dois pontos indicam que é um parâmetro
     const cep = req.params.cep; //obtém o cep da url
-    const cepRegex = /^[0-9]{5}-?\[0-9]{3}$/;
+    const cepRegex = /^[0-9]{5}-[0-9]{3}$/;
 
     if(cepRegex.test(cep)) {
         try {
