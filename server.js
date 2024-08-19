@@ -1,8 +1,12 @@
+/*
 const express = require('express');
 const axios = require('axios');
+*/
 
 const app = express();
+/*
 const port = 3000;
+*/
 
 app.get('/', (req, res) => {
     res.send('Hello World');
@@ -14,6 +18,8 @@ app.get('/rota', (req, res) => {
 });
 */
 
+
+/*
 app.get('/consulta-cep/:cep', async (req, res) => { //:cep -> Os dois pontos indicam que é um parâmetro
     const cep = req.params.cep; //obtém o cep da url
     const cepRegex = /^[0-9]{5}-[0-9]{3}$/;
@@ -35,6 +41,16 @@ app.get('/consulta-cep/:cep', async (req, res) => { //:cep -> Os dois pontos ind
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`); //A crase serve para usar a variável assim: ${var}.
 });
+*/
+
+const express = require('express');
+const rotas = require('./routes');
+
+app.use(express.json());
+app.use('/api', rotas);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
 
 /* Rotas:
     Associação entre um método HTTP, uma URL e um método de um Controlador, retornando a resposta. 
